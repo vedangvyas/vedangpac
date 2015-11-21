@@ -1,0 +1,50 @@
+---
+title: "Vignette for vedangpac"
+author: "Vedang Vyas"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+## vedangpac
+This is a package created by me, Vedang Vyas, as a part of one of my assignments for STAT 545 at UBC. There are two functions in this package: **reordering()** and **factors_unordered()**. 
+
+```{r}
+library(devtools)
+install_github("vedangvyas/vedangpac")
+library(vedangpac)
+```
+
+### reorder()
+**Purpose:** The purpose of this function is to take in a data frame and a factor, and reorder the data frame in a descending order with dependence on the factor.
+
+**Example:**
+```{r}
+library(gapminder)
+library(dplyr)
+gtbl <- tbl_df(gapminder)
+cont <- gtbl$continent
+lifeexp <- gtbl$lifeExp
+reordering(gtbl, cont)
+reordering(gtbl, lifeexp)
+
+```
+
+### factors_unordered()
+**Purpose:** The purpose of this function is to take in a vector and produce a factor where the levels are the vector entries but the factor produced has levels in the same order as they were in the vector. 
+
+**Example:**
+```{r}
+fac <- c("A", "Hello", "Bob", "Apple")
+factors_unordered(fac)
+```
+
+
