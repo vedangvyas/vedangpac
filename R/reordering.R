@@ -7,8 +7,7 @@
 #' @export
 #'
 #' @examples
-#' reordering(tbl_df(gapminder), lifeExp)
+#' reordering(tbl_df(gapminder), tbl_df(gapminder)$lifeExp)
 reordering <- function(df, a_factor){
-  assertthat::assert_that(is.factor(df$a_factor))
-  dplyr::arrange(df, desc(a_factor))
+    dplyr::arrange(df, desc(a_factor))
 }

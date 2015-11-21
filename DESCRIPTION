@@ -1,8 +1,11 @@
 Package: vedangpac
-Title: What the Package Does (one line, title case)
+Title: Unordered Factors and Descending reordering
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-Depends: R (>= 3.2.1)
-License: What license is it under?
+Authors@R: person("Vedang", "Vyas", email = "vpvyas@math.ubc.com", role = c("aut", "cre"))
+Description: The package has two functions, reordering and factors_unordered. The first function reorders a data frame based on the given factor in a descending order. The second function produces a factor with levels in the order they were entered in.
+Depends: 
+    R (>= 3.2.1)
+License: MIT + file LICENCE
 LazyData: true
+RoxygenNote: 5.0.1
+Suggests: testthat
